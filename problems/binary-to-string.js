@@ -1,5 +1,10 @@
 function binaryToString(binaryBlob) {
-  // Your code here
+  let binaries = []
+
+  for(let i =0; i <binaryBlob.length; i +=8) {
+    binaries.push(binaryBlob.slice(i, i+8))
+  }
+  return (binaries.map(blob => String.fromCharCode(parseInt(blob, 2))).join(''))
 }
 
 /* Comment in the code below to run local tests */
